@@ -6,3 +6,19 @@ jwtd() {
          echo "Signature: $(echo "${1}" | awk -F'.' '{print $3}')"
     fi
 }
+
+-----------------------
+This is a simple and efficient Bash function that decodes a JSON Web Token (JWT) 
+to display its header and payload in a human-readable format, and separately 
+outputs the signature.
+
+Description
+
+The jwtd function takes a single argument—a JWT string—and breaks it down into 
+its three constituent parts: Header, Payload, and Signature. It
+
+How to Use
+
+1. Add the function to your shell configuration file: ~/.bashrc, ~/.zshrc, or ~/.bash_profile
+2. Reload your shell configuration (e.g., source ~/.bashrc) or open a new terminal.
+3. Run the function with a JWT as the argument: jwtd <your_jwt_string>
